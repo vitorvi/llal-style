@@ -12,18 +12,22 @@ $rose: #F5EFF0;
 $red: #EB5F6D;
 $dark-red: #D04D61;
 $wine: #792B48;
+$turquesa: #0FB1A9;
+$marrom: #683431;
 
 $colors: () !default;
 $colors: map-merge((
-  "white":         $white,
-  "rose":         $rose,
-  "red":         $red,
-  "dark-red":         $dark-red,
-  "wine":         $wine
+  "white":      $white,
+  "rose":       $rose,
+  "red":        $red,
+  "dark-red":   $dark-red,
+  "wine":       $wine,
+  "turquesa":   $turquesa,
+  "marrom":     $marrom
 ), $colors);
 
-$custom_primary:       $red !default;
-$custom_secondary:     $dark-red !default;
+$custom_primary:       $turquesa;
+$custom_secondary:     $marrom;
 
 // Custom widths for custom containers
 $container-fluid-widths: (
@@ -74,8 +78,8 @@ $custom_btn-font-weight: 200;
 
 // Forms
 //
-$custom_input-color:                          $dark-red;
-$custom_input-focus-border-color:              $dark-red;
+$custom_input-color:                          $marrom;
+$custom_input-focus-border-color:              $turquesa;
 $custom_input-btn-border-width:                2px;
 
 $component-mobile-margin-bottom: 2rem;
