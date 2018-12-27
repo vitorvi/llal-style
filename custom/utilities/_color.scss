@@ -1,0 +1,59 @@
+@each $color, $value in $light-colors {
+  .#{$color}-bg {
+    background-color: #{$value};
+    color: $marrom;
+    > * {
+      color: $marrom;
+    }
+  }
+  .#{$color}-gbg {
+    background: linear-gradient(to top, rgba($value, 1), rgba($value, 0));
+    color: $marrom;
+    > * {
+      color: $marrom;
+    }
+  }
+  .#{$color} {
+    color: #{$value} !important;
+    border-color: #{$value};
+    &.stroke {
+      stroke: #{$value};
+    }
+    * {
+      color: #{$value};
+    }
+  }
+  .#{$color}-border {
+    border-color: #{$value} !important;
+  }
+}
+
+@each $color, $value in $dark-colors {
+  .#{$color}-bg {
+    background-color: #{$value};
+    color: $branco;
+    > * {
+      color: $branco;
+    }
+  }
+  .#{$color}-gbg {
+    background: linear-gradient(to top, rgba($value, 1), rgba($value, 0));
+    color: $branco;
+    > * {
+      color: $branco;
+    }
+  }
+  .#{$color} {
+    color: #{$value} !important;
+    border-color: #{$value};
+    &.stroke {
+      stroke: #{$value};
+    }
+    * {
+      color: #{$value};
+    }
+  }
+  .#{$color}-border {
+    border-color: #{$value} !important;
+  }
+}

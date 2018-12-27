@@ -1,0 +1,28 @@
+@each $label, $map in $spacing {
+  $mobile-value: map-get($map, "mobile");
+  $desktop-value: map-get($map, "desktop");
+  .padding-top-#{$label} {
+    padding-top: $mobile-value;
+    @include media-breakpoint-up(lg) {
+        padding-top: $desktop-value;
+    }
+  }
+  .padding-bottom-#{$label} {
+    padding-bottom: $mobile-value;
+    @include media-breakpoint-up(lg) {
+        padding-bottom: $desktop-value;
+    }
+  }
+  .margin-top-#{$label} {
+    margin-top: $mobile-value;
+    @include media-breakpoint-up(lg) {
+        margin-top: $desktop-value;
+    }
+  }
+  .margin-bottom-#{$label} {
+    margin-bottom: $mobile-value;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: $desktop-value;
+    }
+  }
+}

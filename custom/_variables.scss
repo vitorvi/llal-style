@@ -5,26 +5,79 @@
 // Color system
 //
 
-// cores do Conasems
-
-$white: #FFFFFF;
-$rose: #F5EFF0;
-$red: #EB5F6D;
-$dark-red: #D04D61;
-$wine: #792B48;
 $turquesa: #0FB1A9;
 $marrom: #683431;
+$branco: #FFFFFF;
+$amarelo: #FCBF2A;
+$roxo: #AC4FC6;
+$verde: #BBB323;
+$azul: #418FDE;
+$cinza: #F2F2F2;
 
-$colors: () !default;
-$colors: map-merge((
-  "white":      $white,
-  "rose":       $rose,
-  "red":        $red,
-  "dark-red":   $dark-red,
-  "wine":       $wine,
-  "turquesa":   $turquesa,
-  "marrom":     $marrom
-), $colors);
+$light-colors: (
+  "branco":           $branco,
+  "amarelo":          $amarelo,
+  "cinza":            $cinza
+);
+
+$dark-colors: (
+  "turquesa":           $turquesa,
+  "marrom":             $marrom,
+  "roxo":               $roxo,
+  "verde":              $verde,
+  "azul":               $azul,
+);
+
+$spacing: (
+  micro: (
+    mobile: .5rem,
+    desktop: .5rem
+  ),
+  xsmall: (
+    mobile: 1rem,
+    desktop: 1rem
+  ),
+  small: (
+    mobile: 1rem,
+    desktop: 2rem
+  ),
+  medium: (
+    mobile: 1.5rem,
+    desktop: 3rem
+  ),
+  large: (
+    mobile: 2rem,
+    desktop: 4rem
+  ),
+  xlarge: (
+    mobile: 2.5rem,
+    desktop: 5rem
+  )
+);
+
+$spacing-micro: map_get($spacing, micro);
+$spacing-micro-mobile: map_get($spacing-micro, mobile);
+$spacing-micro-desktop: map_get($spacing-micro, desktop);
+
+$spacing-xsmall: map_get($spacing, xsmall);
+$spacing-xsmall-mobile: map_get($spacing-xsmall, mobile);
+$spacing-xsmall-desktop: map_get($spacing-xsmall, desktop);
+
+$spacing-small: map_get($spacing, small);
+$spacing-small-mobile: map_get($spacing-small, mobile);
+$spacing-small-desktop: map_get($spacing-small, desktop);
+
+$spacing-medium: map_get($spacing, medium);
+$spacing-medium-mobile: map_get($spacing-medium, mobile);
+$spacing-medium-desktop: map_get($spacing-medium, desktop);
+
+$spacing-large: map_get($spacing, large);
+$spacing-large-mobile: map_get($spacing-large, mobile);
+$spacing-large-desktop: map_get($spacing-large, desktop);
+
+$spacing-xlarge: map_get($spacing, xlarge);
+$spacing-xlarge-mobile: map_get($spacing-xlarge, mobile);
+$spacing-xlarge-desktop: map_get($spacing-xlarge, desktop);
 
 $custom_primary:       $turquesa;
 $custom_secondary:     $marrom;
@@ -53,7 +106,7 @@ $grid-gutter-width:           1rem;
 $grid-columns:                12 !default;
 
 $border-width: 2px;
-$border-color: rgba($wine, .3);
+$border-color: rgba($marrom, .3);
 
 // Components
 //
@@ -68,7 +121,7 @@ $custom_transition-collapse: height .35s ease-in-out !default;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-$custom_font-family-sans-serif:      "basic-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$custom_font-family-sans-serif:      urbana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $custom_font-size-base:              .6666666666rem;
 $custom_font-weight-light:           100;
 $custom_font-weight-normal:          200;
@@ -98,7 +151,7 @@ $font-size-lg: .75rem;
 $btn-line-height-lg: 1.5rem;
 $btn-border-radius-lg: 6px;
 
-$custom_dropdown-link-active-color: $white;
+$custom_dropdown-link-active-color: $branco;
 
 $navbar-padding-y:                  0 !default;
 $navbar-padding-x:                  $grid-gutter-width / 2 !default;

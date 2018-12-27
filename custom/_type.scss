@@ -6,7 +6,7 @@
   line-height: 1.5rem;
   font-weight: 300;
   margin-bottom: 0;
-  color: $red;
+  color: $turquesa;
   font-style: normal;
   @include media-breakpoint-up(lg) {
     font-style: normal;
@@ -22,7 +22,7 @@
   line-height: 1rem;
   text-transform: uppercase;
   font-weight: 900;
-  color: $red;
+  color: $turquesa;
   margin-bottom: 0;
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -48,7 +48,7 @@
   line-height: 1rem;
   text-transform: uppercase;
   font-weight: 400;
-  color: $red;
+  color: $turquesa;
   margin-bottom: 0;
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -72,7 +72,7 @@
   line-height: 2rem;
   text-transform: uppercase;
   font-weight: 900;
-  color: $red;
+  color: $turquesa;
   margin-bottom: 0;
   letter-spacing: 1px;
   word-spacing: 1px;
@@ -93,7 +93,7 @@
   line-height: 1rem;
   text-transform: uppercase;
   font-weight: 900;
-  color: $red;
+  color: $turquesa;
   margin-bottom: 0;
   letter-spacing: 1px;
   word-spacing: 1px;
@@ -114,7 +114,7 @@
   line-height: 1rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: $red;
+  color: $turquesa;
   margin-bottom: 0;
   letter-spacing: 1px;
   word-spacing: 1px;
@@ -139,7 +139,7 @@
   text-transform: none;
   letter-spacing: 0;
   font-weight: 300;
-  color: $red;
+  color: $turquesa;
   @include media-breakpoint-up(lg) {
     font-style: normal;
     font-weight: 300;
@@ -172,7 +172,7 @@
   font-size: .5rem;
   line-height: 1rem;
   font-style: normal;
-  color: $red;
+  color: $turquesa;
   @include media-breakpoint-up(lg) {
     font-size: 0.625rem;
   	line-height: 1rem;
@@ -215,7 +215,7 @@ h6, .h6 { @include titulo-6; }
 p, .text-medium, a, li, li a { @include texto-medio; }
 
 p, li {
-  color: $red;
+  color: $turquesa;
 }
 
 .text-small { @include texto-pequeno; }
@@ -243,12 +243,12 @@ p, .text-medium {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	color: $red;
+	color: $turquesa;
 }
 
 *::selection {
-    background-color: $red;
-    color: $white;
+    background-color: $turquesa;
+    color: $branco;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, blockquote {
@@ -319,33 +319,33 @@ a, li, a:hover, a:active {
     bottom: -.5rem;
     left: 0;
     width: 100%;
-    border: 1px solid $red;
+    border: 1px solid $turquesa;
     @include media-breakpoint-up(lg) {
-      border: 2px solid $red;
+      border: 2px solid $turquesa;
     }
   }
 }
 
 // .dark-red-bg, .wine-bg {
 //   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, blockquote {
-//     color: $white;
+//     color: $branco;
 //   }
 //   p, address, figcaption, a {
-//     color: $white;
+//     color: $branco;
 //   }
 // }
 // .red-bg {
 //   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
-//     color: $white;
+//     color: $branco;
 //   }
 // }
 // .rose-bg {
 //   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
-//     color: $wine;
+//     color: $marrom;
 //   }
 // }
 // .white-bg {
 //   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
-//     color: $wine;
+//     color: $marrom;
 //   }
 // }
