@@ -2,88 +2,82 @@
 
 @mixin titulo-1 {
   font-family: $custom_font-family-sans-serif, sans-serif;
-  font-size: 30px;
-  line-height: 1.5rem;
-  font-weight: 300;
+  font-size: 40px;
+  line-height: 2rem;
+  font-weight: 700;
   margin-bottom: 0;
-  color: $turquesa;
+  color: $preto;
   font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  word-spacing: 0;
   @include media-breakpoint-up(lg) {
     font-style: normal;
-    font-weight: 300;
-    font-size: 70px;
+    font-size: 64px;
     line-height: 3rem;
   }
 }
 
 @mixin titulo-2 {
-	font-family: $custom_font-family-sans-serif, sans-serif;
-  font-size: 20px;
-  line-height: 1rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: $turquesa;
+    font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 30px;
+  line-height: 1.5rem;
+  text-transform: lowercase;
+  font-weight: 700;
+  color: $preto;
   margin-bottom: 0;
-  letter-spacing: 2px;
-  word-spacing: 2px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
   font-style: normal;
+  font-variant: all-small-caps;
   @include media-breakpoint-up(lg) {
     font-style: normal;
-    font-weight: 900;
     font-size: 40px;
     line-height: 2rem;
-    letter-spacing: 4px;
-    word-spacing: 4px;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 50px;
-    line-height: 2.5rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
   }
 }
 
 @mixin titulo-3 {
   font-family: $custom_font-family-sans-serif, sans-serif;
-  font-style: italic;
-  font-size: 20px;
-  line-height: 1rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: $turquesa;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 1.5rem;
+  text-transform: none;
+  font-weight: 700;
+  color: $preto;
   margin-bottom: 0;
-  letter-spacing: 2px;
-  word-spacing: 2px;
+  letter-spacing: 0;
+  word-spacing: 0;
   @include media-breakpoint-up(lg) {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 2rem;
-    letter-spacing: 4px;
-    word-spacing: 4px;
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 50px;
-    line-height: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+    word-spacing: 0;
   }
 }
 
 @mixin titulo-4 {
   font-family: $custom_font-family-sans-serif, sans-serif;
   font-size: 16px;
-  line-height: 2rem;
+  line-height: 1rem;
   text-transform: uppercase;
-  font-weight: 900;
-  color: $turquesa;
+  font-weight: 700;
+  color: $preto;
   margin-bottom: 0;
-  letter-spacing: 1px;
-  word-spacing: 1px;
+  letter-spacing: .5px;
+  word-spacing: .5px;
   font-style: normal;
   @include media-breakpoint-up(lg) {
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.5rem;
-    letter-spacing: 3px;
-    word-spacing: 3px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
   }
 }
 
@@ -91,41 +85,41 @@
   font-family: $custom_font-family-sans-serif, sans-serif;
   font-size: 16px;
   line-height: 1rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: $turquesa;
+  text-transform: none;
+  font-weight: 700;
+  color: $preto;
   margin-bottom: 0;
-  letter-spacing: 1px;
-  word-spacing: 1px;
+  letter-spacing: 0;
+  word-spacing: 0;
   font-style: normal;
   @include media-breakpoint-up(lg) {
     font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 1.5rem;
-    letter-spacing: 2px;
-    word-spacing: 2px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1rem;
+    letter-spacing: 0;
+    word-spacing: 0;
   }
 }
 
 @mixin titulo-6 {
   font-family: $custom_font-family-sans-serif, sans-serif;
-  font-size: 16px;
-  line-height: 1rem;
+  font-size: 15px;
+  line-height: .75rem;
   text-transform: uppercase;
-  font-weight: 600;
-  color: $turquesa;
+  font-weight: 700;
+  color: $preto;
   margin-bottom: 0;
-  letter-spacing: 1px;
-  word-spacing: 1px;
+  letter-spacing: .5px;
+  word-spacing: .5px;
   font-style: normal;
   @include media-breakpoint-up(lg) {
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 20px;
-    line-height: 2rem;
-    letter-spacing: 2px;
-    word-spacing: 2px;
+    line-height: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
   }
 }
 
@@ -139,7 +133,7 @@
   text-transform: none;
   letter-spacing: 0;
   font-weight: 300;
-  color: $marrom;
+  color: $preto;
   @include media-breakpoint-up(lg) {
     font-style: normal;
     font-weight: 300;
@@ -150,16 +144,16 @@
 
 @mixin texto-medio {
   font-family: $custom_font-family-sans-serif, sans-serif;
-	font-size: 16px;
-  line-height: 1rem;
+  font-size: 20px;
+  line-height: 1.5rem;
   font-weight: 400;
   margin-bottom: 0;
   text-transform: none;
   letter-spacing: 0;
   font-style: normal;
-  color: $marrom;
+  color: $preto;
   @include media-breakpoint-up(lg) {
-    font-size: 18px;
+    font-size: 25px;
     font-style: normal;
   }
 }
@@ -173,7 +167,7 @@
   font-size: .5rem;
   line-height: 1rem;
   font-style: normal;
-  color: $marrom;
+  color: $preto;
   @include media-breakpoint-up(lg) {
     font-size: 0.625rem;
   	line-height: 1rem;
@@ -216,7 +210,7 @@ h6, .h6 { @include titulo-6; }
 p, .text-medium, a, li, li a { @include texto-medio; }
 
 p, li {
-  color: $turquesa;
+  color: $preto;
 }
 
 .text-small { @include texto-pequeno; }
@@ -244,7 +238,7 @@ p, .text-medium {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	color: $turquesa;
+	color: $preto;
 }
 
 *::selection {
@@ -305,7 +299,7 @@ a, a:hover {
 }
 
 a:hover {
-  opacity: .75;
+  //opacity: .75;
 }
 
 a, li, a:hover, a:active {

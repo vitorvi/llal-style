@@ -8,13 +8,13 @@ html, body {
 }
 
 html {
-  font-size: 162.5%;
+  font-size: 125%;
   font-family: "Roboto";
   @include media-breakpoint-up(lg) {
-    font-size: 162.5%;
+    font-size: 150%;
   }
   @include media-breakpoint-up(xl) {
-    font-size: 162.5%;
+    font-size: 150%;
   }
 }
 
