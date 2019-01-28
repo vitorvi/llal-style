@@ -50,11 +50,11 @@ $spacing: (
     desktop: 2.5rem
   ),
   large: (
-    mobile: 2.5rem,
+    mobile: 3rem,
     desktop: 4rem
   ),
   xlarge: (
-    mobile: 3rem,
+    mobile: 4rem,
     desktop: 5rem
   )
 );
@@ -130,6 +130,9 @@ $custom_font-size-base:              .6666666666rem;
 $custom_font-weight-light:           100;
 $custom_font-weight-normal:          200;
 $custom_font-weight-bold:            400;
+
+$font-family-heading:      urbana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-text:      'Asap', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $custom_btn-font-weight: 200;
 

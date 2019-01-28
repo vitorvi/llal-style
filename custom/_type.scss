@@ -1,7 +1,7 @@
 // Custom GC Typography
 
 @mixin titulo-1 {
-  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-family: $font-family-heading, sans-serif;
   font-size: 40px;
   line-height: 2rem;
   font-weight: 700;
@@ -19,28 +19,27 @@
 }
 
 @mixin titulo-2 {
-    font-family: $custom_font-family-sans-serif, sans-serif;
-  font-size: 30px;
-  line-height: 1.5rem;
-  text-transform: lowercase;
-  font-weight: 700;
-  color: $preto;
-  margin-bottom: 0;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  font-style: normal;
-  font-variant: all-small-caps;
-  @include media-breakpoint-up(lg) {
+    font-family: $font-family-heading, sans-serif;
+    font-size: 30px;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $preto;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    word-spacing: 1px;
     font-style: normal;
-    font-size: 40px;
-    line-height: 2rem;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-  }
+    @include media-breakpoint-up(lg) {
+        font-style: normal;
+        font-size: 40px;
+        line-height: 2rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+    }
 }
 
 @mixin titulo-3 {
-  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-family: $font-family-heading, sans-serif;
   font-style: normal;
   font-size: 25px;
   line-height: 1.5rem;
@@ -61,7 +60,7 @@
 }
 
 @mixin titulo-4 {
-  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-family: $font-family-heading, sans-serif;
   font-size: 16px;
   line-height: 1rem;
   text-transform: uppercase;
@@ -82,7 +81,7 @@
 }
 
 @mixin titulo-5 {
-  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-family: $font-family-heading, sans-serif;
   font-size: 16px;
   line-height: 1rem;
   text-transform: none;
@@ -103,7 +102,7 @@
 }
 
 @mixin titulo-6 {
-  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-family: $font-family-heading, sans-serif;
   font-size: 15px;
   line-height: .75rem;
   text-transform: uppercase;
@@ -124,15 +123,14 @@
 }
 
 @mixin texto-grande {
-  font-family: $custom_font-family-sans-serif, sans-serif;
-  font-size: 20px;
-  line-height: 1rem;
+  font-family: $font-family-heading, sans-serif;
+  font-size: 25px;
+  line-height: 1.5rem;
   font-weight: 300;
   margin-bottom: 0;
   font-style: normal;
   text-transform: none;
   letter-spacing: 0;
-  font-weight: 300;
   color: $preto;
   @include media-breakpoint-up(lg) {
     font-style: normal;
@@ -143,8 +141,8 @@
 }
 
 @mixin texto-medio {
-  font-family: $custom_font-family-sans-serif, sans-serif;
-  font-size: 20px;
+  font-family: $font-family-text, sans-serif;
+  font-size: 18px;
   line-height: 1.5rem;
   font-weight: 400;
   margin-bottom: 0;
@@ -153,13 +151,13 @@
   font-style: normal;
   color: $preto;
   @include media-breakpoint-up(lg) {
-    font-size: 25px;
+    font-size: 22px;
     font-style: normal;
   }
 }
 
 @mixin texto-pequeno {
-  font-family: $custom_font-family-sans-serif, monospace;
+  font-family: $font-family-text, monospace;
 	font-weight: 400;
 	margin-bottom: .5rem;
   text-transform: none;
@@ -207,7 +205,12 @@ h6, .h6 { @include titulo-6; }
   }
 }
 
-p, .text-medium, a, li, li a { @include texto-medio; }
+p, .text-medium, a, li, li a {
+    @include texto-medio;
+    strong {
+        font-weight: 700;
+    }
+}
 
 p, li {
   color: $preto;
@@ -215,7 +218,12 @@ p, li {
 
 .text-small { @include texto-pequeno; }
 
-blockquote, .text-large, blockquote p { @include texto-grande; }
+blockquote, .text-large, blockquote p {
+    @include texto-grande;
+    strong {
+        font-weight: 600;
+    }
+}
 
 figcaption, input, textarea { @include texto-pequeno; }
 

@@ -4,15 +4,36 @@
     border-radius: 0;
 }
 
+.stores {
+    position: relative;
+    .stores-cover {
+        height: 100vw;
+        width: 100%;
+        object-fit: cover;
+    }
+    @include media-breakpoint-up(lg) {
+        paddig-top: 0;
+        .stores-cover {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
+
 .slider {
     .owl-theme {
         .owl-dots {
             position: absolute;
-            bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 1.5rem;
+            left: 0;
             @include media-breakpoint-up(lg) {
                 bottom: 2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
             }
             button {
                 span {
@@ -23,13 +44,82 @@
             }
             .owl-dot {
                 span {
-                    background: rgba($cinza-2, .5);
+                    background: rgba($branco, .5);
                 }
                 &.active, &:hover {
                     span {
-                        background: rgba($cinza-2, 1);
+                        background: rgba($branco, 1);
                     }
                 }
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 50%;
+            button {
+                position: absolute;
+                bottom: 0;
+                &.owl-prev {
+                    left: 0;
+                }
+                &.owl-next {
+                    right: 0;
+                }
+                span {
+                    font-size: 4rem;
+                    color: $branco;
+                }
+            }
+        }
+    }
+    &.timeline {
+        position: relative;
+        .ano {
+            font-size: 40px;
+            line-height: 2rem;
+            font-weight: 600;
+            @include media-breakpoint-up(lg) {
+                font-size: 64px;
+                line-height: 3rem;
+                font-weight: 300;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            .imagem {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 100% / 5 * 3;
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        #navTimeline {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            .prev, .next {
+                position: absolute;
+                bottom: 0;
+            }
+            .prev {
+                left: 0;
+            }
+            .next {
+                right: 0;
+            }
+        }
+    }
+    &.archive {
+        .owl-carousel {
+            .owl-stage-outer {
+                overflow: visible;
             }
         }
     }
@@ -49,29 +139,78 @@
         .owl-carousel {
             &.bg {
                 img {
+                    object-fit: cover;
                     height: calc(100vh - 8rem);
                 }
             }
         }
-        .owl-nav {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            button {
-                position: absolute;
-                bottom: 5rem;
-                &.owl-prev {
-                    left: 0;
-                }
-                &.owl-next {
-                    right: 0;
-                }
-                span {
-                    font-size: 4rem;
-                    color: $branco;
+        .owl-theme {
+            .owl-nav {
+                bottom: 0;
+                button {
+                    bottom: 5rem;
                 }
             }
+        }
+    }
+    &.brand {
+        .owl-theme {
+            .owl-dots {
+                .owl-dot {
+                    span {
+                        background: rgba($cinza-2, .5);
+                    }
+                    &.active, &:hover {
+                        span {
+                            background: rgba($cinza-2, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.golden-circle {
+    position: relative;
+    #theCircle {
+        position: relative;
+        padding-bottom: 100%;
+        .nav-link {
+            border: 2px solid $amarelo;
+        }
+    }
+    #oqueIlustra {
+        position: absolute;
+        padding: 0;
+        padding-bottom: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    $goldenPadding: 3rem;
+    #comoIlustra {
+        position: absolute;
+        width: calc(100% - #{$goldenPadding * 2});
+        top: $goldenPadding;
+        left: $goldenPadding;
+        padding: 0;
+        padding-bottom: calc(100% - #{$goldenPadding * 2});
+        border-radius: 50%;
+    }
+    #porqueIlustra {
+        position: absolute;
+        width: calc(100% - #{$goldenPadding * 4});
+        top: $goldenPadding * 2;
+        left: $goldenPadding * 2;
+        padding: 0;
+        padding-bottom: calc(100% - #{$goldenPadding * 4});
+        border-radius: 50%;
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-width: 50%;
         }
     }
 }
