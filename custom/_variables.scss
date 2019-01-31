@@ -12,15 +12,18 @@ $amarelo: #FCBF2A;
 $lilas: #AC4FC6;
 $verde: #BBB323;
 $azul: #418FDE;
-$cinza: #F2F2F2;
-$cinza-2: #c4c4c4;
+$cinza-1: #F2F2F2;
+$cinza-2: #E0E0E0;
+$cinza-3: #BDBDBD;
+$cinza-4: #828282;
 $preto: rgba(#000000, .7);
 
 $light-colors: (
   "branco":           $branco,
   "amarelo":          $amarelo,
-  "cinza":            $cinza,
-  "cinza-2":          $cinza-2
+  "cinza-1":          $cinza-1,
+  "cinza-2":          $cinza-2,
+  "cinza-3":          $cinza-3
 );
 
 $dark-colors: (
@@ -29,6 +32,7 @@ $dark-colors: (
   "lilas":              $lilas,
   "verde":              $verde,
   "azul":               $azul,
+  "cinza-4":            $cinza-4,
   "preto":              $preto
 );
 

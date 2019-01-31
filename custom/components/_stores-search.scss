@@ -1,0 +1,15 @@
+.stores-search {
+  position: relative;
+  #listaLojas {
+    height: 60vh;
+    overflow-y: scroll;
+  }
+  #map {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

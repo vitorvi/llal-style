@@ -1,0 +1,30 @@
+.archive-full {
+    .slider-grad {
+        opacity: 0;
+        &.active {
+            opacity: .75;
+        }
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .owl-carousel {
+        &.bg {
+            img {
+                object-fit: cover;
+                height: calc(100vh - 8rem);
+            }
+        }
+    }
+    .owl-theme {
+        .owl-nav {
+            bottom: 0;
+            button {
+                bottom: 5rem;
+            }
+        }
+    }
+}

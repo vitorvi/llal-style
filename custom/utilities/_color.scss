@@ -1,6 +1,7 @@
 @each $color, $value in $light-colors {
   .#{$color}-bg {
     background-color: #{$value};
+    border-color: #{$value};
     color: $marrom;
     > * {
       color: $marrom;
@@ -32,6 +33,7 @@
   .#{$color}-bg {
     background-color: #{$value};
     color: $branco;
+    border-color: #{$value};
     > * {
       color: $branco;
     }

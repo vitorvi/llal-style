@@ -1,0 +1,58 @@
+.slider {
+    .owl-item {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .owl-theme {
+        .owl-dots {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0;
+            @include media-breakpoint-up(lg) {
+                bottom: 2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            button {
+                span {
+                    width: 1.5rem;
+                    height: .25rem;
+                    margin: .25rem;
+                }
+            }
+            .owl-dot {
+                span {
+                    background: rgba($branco, .5);
+                }
+                &.active, &:hover {
+                    span {
+                        background: rgba($branco, 1);
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 50%;
+            button {
+                position: absolute;
+                bottom: 0;
+                &.owl-prev {
+                    left: 0;
+                }
+                &.owl-next {
+                    right: 0;
+                }
+                span {
+                    font-size: 4rem;
+                    color: $branco;
+                }
+            }
+        }
+    }
+}

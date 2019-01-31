@@ -1,0 +1,63 @@
+ .page-footer {
+   .logo-footer {
+     height: 4rem;
+     width: auto;
+     object-fit: contain;
+     object-position: left;
+     max-width: 100%;
+     @include media-breakpoint-up(lg) {
+       height: 5.5rem;
+     }
+   }
+   .logos-empresas {
+     a {
+       display: block;
+       width: auto;
+       margin-left: 1rem;
+       margin-right: 1rem;
+       max-width: calc(50% - 2rem);
+       img {
+         width: auto;
+         height: 2rem;
+         object-position: center;
+         object-fit: contain;
+         @include media-breakpoint-up(md) {
+           height: 3rem;
+           object-position: left;
+         }
+       }
+       @include media-breakpoint-up(md) {
+         margin-left: 0;
+         margin-right: 2rem;
+       }
+     }
+   }
+   .social-media {
+     li {
+       margin: 0 .75rem;
+       &:first-child {
+          margin-left: 0;
+       }
+       &:last-child {
+          margin-right: 0;
+       }
+       @include media-breakpoint-up(lg) {
+         margin: 0 1rem;
+         &:last-child {
+            margin: 0;
+         }
+         &:last-child {
+            margin-right: 0;
+         }
+       }
+       a {
+         i {
+           font-size: 1.5rem;
+           @include media-breakpoint-up(lg) {
+             font-size: 2rem;
+           }
+         }
+       }
+     }
+   }
+ }

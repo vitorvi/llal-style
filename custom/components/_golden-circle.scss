@@ -1,0 +1,122 @@
+.golden-circle {
+    position: relative;
+    .titulo {
+      border-bottom: 2px solid $cinza-2;
+      width: 100%;
+    }
+    .nav-tabs {
+      border-bottom: 2px solid $cinza-2;
+      .nav-item {
+        .nav-link {
+          border: none;
+          padding: 0;
+          border-right: 2px solid $cinza-2;
+          color: $cinza-3;
+          &.active {
+            color: $amarelo;
+            font-weight: 700;
+          }
+        }
+        &:last-child {
+          .nav-link {
+            border-right: none;
+          }
+        }
+      }
+    }
+    .tab-content {
+      p {
+        color: $cinza-4;
+      }
+    }
+    #theCircle {
+        position: relative;
+        padding-bottom: 100%;
+        .nav-link {
+            border: 2px solid $cinza-2;
+            background-color: $branco;
+            cursor: pointer;
+            box-sizing: content-box;
+            transition: .1s all linear;
+            .logo {
+              .aro, .ponta, .folha {
+                transition: .1s fill linear;
+              }
+              .aro, .ponta {
+                fill: $cinza-2;
+              }
+              .folha {
+                fill: $cinza-4;
+              }
+            }
+            &:hover {
+              background-color: lighten($amarelo, 30%);
+              border: 2px solid $amarelo;
+            }
+            &.active {
+              background-color: $amarelo;
+              border: 2px solid $amarelo;
+              .logo {
+                .aro, .ponta {
+                  fill: $branco;
+                }
+                .folha {
+                  fill: $marrom;
+                }
+              }
+              &:hover {
+                background-color: $amarelo;
+              }
+              & + .nav-link {
+                border: 2px solid $amarelo;
+              }
+            }
+        }
+    }
+    #oqueIlustra {
+        position: absolute;
+        padding: 0;
+        padding-bottom: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    $goldenPadding_mobile: 2rem;
+    $goldenPadding_desktop: 3.5rem;
+    #comoIlustra {
+        position: absolute;
+        width: calc(100% - #{$goldenPadding_mobile * 2});
+        top: $goldenPadding_mobile;
+        left: $goldenPadding_mobile;
+        padding: 0;
+        padding-bottom: calc(100% - #{$goldenPadding_mobile * 2});
+        border-radius: 50%;
+        @include media-breakpoint-up(lg) {
+          width: calc(100% - #{$goldenPadding_desktop * 2});
+          top: $goldenPadding_desktop;
+          left: $goldenPadding_desktop;
+          padding-bottom: calc(100% - #{$goldenPadding_desktop * 2});
+        }
+    }
+    #porqueIlustra {
+        position: absolute;
+        width: calc(100% - #{$goldenPadding_mobile * 4});
+        top: $goldenPadding_mobile * 2;
+        left: $goldenPadding_mobile * 2;
+        padding: 0;
+        padding-bottom: calc(100% - #{$goldenPadding_mobile * 4});
+        border-radius: 50%;
+        @include media-breakpoint-up(lg) {
+          width: calc(100% - #{$goldenPadding_desktop * 4});
+          top: $goldenPadding_desktop * 2;
+          left: $goldenPadding_desktop * 2;
+          padding-bottom: calc(100% - #{$goldenPadding_desktop * 4});
+        }
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-width: 50%;
+        }
+    }
+}

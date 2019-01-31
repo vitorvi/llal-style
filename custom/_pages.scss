@@ -1,3 +1,22 @@
 main.page {
-    padding-top: 4.5rem;
+  padding-top: 3.5rem;
+    @include media-breakpoint-up(lg) {
+      padding-top: 4.5rem;
+    }
+    &.single {
+      .post-content {
+        blockquote, blockquote p {
+          color: $marrom;
+          font-style: italic;
+        }
+        blockquote {
+          & + p {
+            margin-top: 1rem;
+            @include media-breakpoint-up(lg) {
+              margin-top: 2.5rem;
+            }
+          }
+        }
+      }
+    }
 }

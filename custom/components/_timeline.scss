@@ -1,0 +1,62 @@
+.timeline {
+    position: relative;
+    .imagem {
+      position: absolute;
+      top: 9rem;
+      img {
+        height: 66.666vw;
+      }
+    }
+    .ano {
+        font-size: 40px;
+        line-height: 2rem;
+        font-weight: 600;
+        margin-bottom: calc(66.666vw + 4rem);
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            font-size: 64px;
+            line-height: 3rem;
+            font-weight: 300;
+        }
+    }
+    .texto {
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 4rem;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+        .imagem {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100% / 5 * 3;
+            height: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    #navTimeline {
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        z-index: 2;
+        @include media-breakpoint-up(lg) {
+          bottom: 0;
+          top: unset;
+        }
+        button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border: none;
+          background: none;
+        }
+        .prev, .next {
+        }
+        .prev {
+        }
+        .next {
+        }
+    }
+}

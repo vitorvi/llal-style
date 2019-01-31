@@ -1,0 +1,138 @@
+.brand {
+    .mask-container {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        .owl-carousel, .owl-stage-outer, .owl-stage, .owl-item {
+          height: 100%;
+        }
+    }
+    .owl-carousel {
+        &.owl-theme {
+          .owl-dots {
+              width: 100%;
+              padding-left: $grid-gutter-width;
+              padding-right: $grid-gutter-width;
+              .owl-dot {
+                  span {
+                      background: rgba($cinza-2, .5);
+                  }
+                  &.active, &:hover {
+                      span {
+                          background: rgba($cinza-2, 1);
+                      }
+                  }
+              }
+          }
+      }
+      &.bg, &.content {
+        pointer-events: none;
+        width: 100%;
+        position: relative;
+        @include media-breakpoint-up(md) {
+          min-height: 80vh;
+        }
+      }
+      &.bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include media-breakpoint-down(sm) {
+          height: 66.6666vw;
+        }
+        .owl-stage-outer, .owl-stage, .owl-item, .item, img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include media-breakpoint-up(md) {
+              height: 80vh;
+            }
+        }
+        img {
+            object-fit: cover;
+        }
+      }
+      &.mask{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          @include media-breakpoint-up(md) {
+            transform: rotate(-270deg);
+            top: calc(50% - 50vw);
+            left: calc(50% - 40vh);
+            width: 80vh;
+            height: 100vw;
+          }
+          .item {
+              transform-origin: center;
+              @include media-breakpoint-down(sm) {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 100%;
+              }
+              @include media-breakpoint-up(md) {
+                height: 100vw;
+                transform: rotate(180deg);
+                position: relative;
+              }
+              img {
+                object-fit: cover;
+                object-position: top;
+                @include media-breakpoint-down(sm) {
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  right: 0;
+                  left: 0;
+                  height: 100%;
+                }
+                @include media-breakpoint-up(md) {
+                  height: calc(80vh + 120px);
+                  transform-origin: top left;
+                  width: 100vw;
+                  transform: translateX(calc(80vh + 60px)) rotate(90deg);
+                }
+              }
+          }
+      }
+      &.content {
+        h2 {
+          @include media-breakpoint-down(sm) {
+            position: absolute;
+            top: 0;
+            width: calc(100% - #{$grid-gutter-width})
+          }
+        }
+        .imagem {
+          @include media-breakpoint-down(sm) {
+            margin-top: 66.6666vw;
+          }
+        }
+        .descricao {
+          color: $branco;
+          @include media-breakpoint-up(md) {
+            color: $branco;
+          }
+        }
+        .owl-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+      }
+    }
+    .mask-container {
+        overflow: visible;
+    }
+}

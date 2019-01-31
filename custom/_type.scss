@@ -2,7 +2,7 @@
 
 @mixin titulo-1 {
   font-family: $font-family-heading, sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -140,6 +140,23 @@
   }
 }
 
+@mixin blockquote {
+  font-family: $font-family-text, sans-serif;
+  font-size: 22px;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: italic;
+  color: $marrom;
+  @include media-breakpoint-up(lg) {
+    font-size: 32px;
+    line-height: 2rem;
+    font-style: italic;
+  }
+}
+
 @mixin texto-medio {
   font-family: $font-family-text, sans-serif;
   font-size: 18px;
@@ -162,14 +179,30 @@
 	margin-bottom: .5rem;
   text-transform: none;
   letter-spacing: 0;
-  font-size: .5rem;
+  font-size: 14px;
   line-height: 1rem;
   font-style: normal;
   color: $preto;
   @include media-breakpoint-up(lg) {
-    font-size: 0.625rem;
+    font-size: 16px;
   	line-height: 1rem;
     font-style: normal;
+  }
+}
+
+@mixin texto-botao {
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+@mixin texto-botao-grande {
+  font-family: $font-family-heading, sans-serif;
+  font-size: 30px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-size: 35px;
   }
 }
 
@@ -216,16 +249,22 @@ p, li {
   color: $preto;
 }
 
-.text-small { @include texto-pequeno; }
-
-blockquote, .text-large, blockquote p {
+.text-large {
     @include texto-grande;
     strong {
         font-weight: 600;
     }
 }
+blockquote, blockquote p {
+  @include blockquote;
+}
 
-figcaption, input, textarea { @include texto-pequeno; }
+.text-small, figcaption, input, textarea {
+  @include texto-pequeno;
+  strong {
+    font-weight: 700;
+  }
+}
 
 h1, .h1 {
   strong {
@@ -238,11 +277,19 @@ p, .text-medium {
     font-weight: 700;
   }
   & + p {
-    margin-top: .5rem;
+    margin-top: 1rem;
   }
   & + .text-medium {
-    margin-top: .5rem;
+    margin-top: 1rem;
   }
+}
+
+.button {
+  @include texto-botao;
+}
+
+.button-large {
+  @include texto-botao-grande;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -314,6 +361,48 @@ a, li, a:hover, a:active {
     color: inherit;
 }
 
+.tag-small {
+  font-family: $font-family-text, sans-serif;
+  line-height: 1rem;
+  letter-spacing: .5px;
+  border: 2px solid $preto;
+  display: inline-flex;
+  padding: 0 .25rem;
+  border-radius: 2px 8px 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tag {
+  font-family: $font-family-text, sans-serif;
+  line-height: 1rem;
+  letter-spacing: 1px;
+  border: 2px solid $preto;
+  display: inline-flex;
+  padding: 0 .25rem;
+  border-radius: 2px 8px 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+  }
+}
+
+.tag-large {
+  font-family: $font-family-text, sans-serif;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  border: 2px solid $preto;
+  display: inline-flex;
+  padding: 0 .5rem;
+  border-radius: 2px 8px 2px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .link-lg {
   position: relative;
   &::after {
@@ -328,27 +417,3 @@ a, li, a:hover, a:active {
     }
   }
 }
-
-// .dark-red-bg, .wine-bg {
-//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, blockquote {
-//     color: $branco;
-//   }
-//   p, address, figcaption, a {
-//     color: $branco;
-//   }
-// }
-// .red-bg {
-//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
-//     color: $branco;
-//   }
-// }
-// .rose-bg {
-//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
-//     color: $marrom;
-//   }
-// }
-// .white-bg {
-//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
-//     color: $marrom;
-//   }
-// }
