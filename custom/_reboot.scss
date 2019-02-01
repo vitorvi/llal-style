@@ -37,3 +37,17 @@ button {
     outline: none;
   }
 }
+
+*::-webkit-scrollbar {
+    width: .5rem;
+    color: $turquesa;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: $cinza-1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $cinza-3;
+  outline: none;
+}
