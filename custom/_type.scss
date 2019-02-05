@@ -197,12 +197,16 @@
 
 @mixin texto-botao-grande {
   font-family: $font-family-heading, sans-serif;
-  font-size: 30px;
-  line-height: 1.5rem;
+  font-size: 20px;
+  line-height: 1rem;
   font-weight: 300;
+  font-variant: all-small-caps;
+  letter-spacing: 1px;
   @include media-breakpoint-up(lg) {
     font-style: normal;
-    font-size: 35px;
+    font-size: 30px;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
   }
 }
 

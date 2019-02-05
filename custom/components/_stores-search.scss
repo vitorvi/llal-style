@@ -3,15 +3,6 @@
   @include media-breakpoint-down(sm) {
     padding-top: 100%;
   }
-  .dropdown {
-    .dropdown-toggle {
-      background-color: transparent;
-      padding: .5rem;
-      &::after {
-        display: none;
-      }
-    }
-  }
   .dropdown-menu {
     width: 100%;
     .dropdown-item {

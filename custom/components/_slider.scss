@@ -39,18 +39,41 @@
             width: 100%;
             left: 0;
             bottom: 50%;
+            [class*=owl-] {
+              &:hover {
+                background: none;
+              }
+            }
             button {
                 position: absolute;
                 bottom: 0;
+                margin: 0;
+                line-height: 2rem;
+                display: block;
+                transform: translateY(-50%);
                 &.owl-prev {
                     left: 0;
+                    &:hover {
+                      span {
+                        transform: translateX(-.5rem);
+                      }
+                    }
                 }
                 &.owl-next {
                     right: 0;
+                    &:hover {
+                      span {
+                        transform: translateX(.5rem);
+                      }
+                    }
                 }
                 span {
-                    font-size: 4rem;
-                    color: $branco;
+                  transition: transform .15s ease;
+                  font-family: $font-family-heading;
+                  font-size: 4rem;
+                  line-height: 2rem;
+                  color: $branco;
+                  display: block;
                 }
             }
         }

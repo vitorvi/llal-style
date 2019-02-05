@@ -1,0 +1,13 @@
+#orderPosts {
+  a {
+    padding: 0 1rem;
+    border-right: 1px solid $marrom;
+    &.active {
+      font-weight: 600;
+    }
+    cursor: pointer;
+    &:last-child {
+      border: none;
+    }
+  }
+}

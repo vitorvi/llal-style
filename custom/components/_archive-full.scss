@@ -1,4 +1,4 @@
-.archive-full {
+.archive-full.slider {
     .slider-grad {
         opacity: 0;
         &.active {
@@ -21,10 +21,10 @@
     }
     .owl-theme {
         .owl-nav {
-            bottom: 0;
-            button {
-                bottom: 5rem;
-            }
+          bottom: #{1.5 * $spacing-xlarge-mobile};
+          @include media-breakpoint-up(lg) {
+            bottom: #{1.5 * $spacing-xlarge-desktop};
+          }
         }
     }
 }

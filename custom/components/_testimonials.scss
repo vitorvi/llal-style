@@ -1,0 +1,30 @@
+.testimonials {
+  figure {
+    svg {
+      overflow: visible;
+      padding-top: 2px;
+      .hex-frame {
+        fill: none;
+        stroke: white;
+        stroke-width: 2;
+        transform: translate(.5rem, 0);
+      }
+      path {
+        filter: grayscale(100%);
+      }
+    }
+  }
+  p {
+    &.cargo {
+      margin-top: 0;
+    }
+  }
+}
+
+.filters-svg {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: none;
+    left: -100%;
+}

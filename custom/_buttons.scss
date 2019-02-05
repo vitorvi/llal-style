@@ -18,29 +18,71 @@
 }
 
 @mixin button {
-  font-family: $custom_font-family-sans-serif, monospace;
-  font-weight: 400;
-  margin-bottom: 0;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 16px;
-  line-height: 1rem;
-  font-style: normal;
-  border: 1px solid $turquesa;
+  @include texto-botao-grande;
+  border: 2px solid $turquesa;
   color: $turquesa;
-  padding: .25rem .5rem;
-  @include media-breakpoint-up(lg) {
-    padding: .5rem 1rem;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1rem;
-    letter-spacing: 0px;
-    word-spacing: 0px;
+  padding: .5rem .75rem;
+  border-radius: 2px 1rem 2px 1rem;
+}
+
+.btn-large { @include texto-botao-grande; }
+
+.link-large {
+  @include texto-botao-grande;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    &::after {
+      transform: translateY(.25rem);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $turquesa;
+    bottom: -.25rem;
+    left: 0;
+    transform: translateY(0);
+    transition: all .15s ease;
   }
 }
 
-.btn-large { @include button-large; }
+.dropdown {
+  .dropdown-toggle {
+    @include texto-botao-grande;
+    background-color: transparent;
+    padding: .5rem;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5rem .75rem;
+    border-radius: 2px;
+    cursor: pointer;
+    &::after {
+      content: "›";
+      border: none;
+      position: absolute;
+      right: .75rem;
+      top: 50%;
+      display: inline-block;
+      width: .5rem;
+      height: 1rem;
+      transform: translateY(-50%) rotate(-270deg);
+      transform-origin: center;
+      transition: transform .15s ease;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1rem;
+    }
+    &[aria-expanded=true] {
+      &::after {
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+  }
+}
 
 .btn {
   @include button;

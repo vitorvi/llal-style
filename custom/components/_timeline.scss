@@ -12,7 +12,7 @@
         line-height: 2rem;
         font-weight: 600;
         margin-bottom: calc(66.666vw + 4rem);
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             margin-bottom: 0;
             font-size: 64px;
             line-height: 3rem;
@@ -20,16 +20,16 @@
         }
     }
     .texto {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(md) {
         margin-bottom: 4rem;
       }
     }
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         .imagem {
             top: 0;
             bottom: 0;
             right: 0;
-            width: 100% / 5 * 3;
+            width: 50%;
             height: 100%;
             img {
                 height: 100%;
@@ -37,12 +37,17 @@
             }
         }
     }
+    @include media-breakpoint-up(lg) {
+        .imagem {
+            width: 100% / 5 * 3;
+        }
+    }
     #navTimeline {
         position: absolute;
-        top: 5rem;
+        top: 6rem;
         width: 100%;
         z-index: 2;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
           bottom: 0;
           top: unset;
         }
@@ -53,10 +58,41 @@
           background: none;
         }
         .prev, .next {
+          cursor: pointer;
+          transition: opacity .15s ease;
+          &.disabled {
+            opacity: 0;
+            pointer-events: none;
+          }
+          .text {
+            display: inline-block;
+          }
+          .arrow {
+            font-size: 2rem;
+            display: inline-block;
+            vertical-align: bottom;
+            transition: transform .15s ease;
+          }
         }
         .prev {
+          &:hover {
+              .arrow {
+                transform: translateX(-.25rem);
+              }
+          }
+          .arrow {
+            margin-right: .5rem;
+          }
         }
         .next {
+          &:hover {
+              .arrow {
+                transform: translateX(.25rem);
+              }
+          }
+          .arrow {
+            margin-left: .5rem;
+          }
         }
     }
 }
