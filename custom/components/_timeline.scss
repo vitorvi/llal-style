@@ -44,7 +44,7 @@
     }
     #navTimeline {
         position: absolute;
-        top: 6rem;
+        top: 6.5rem;
         width: 100%;
         z-index: 2;
         @include media-breakpoint-up(md) {
@@ -68,10 +68,15 @@
             display: inline-block;
           }
           .arrow {
-            font-size: 2rem;
+            font-size: 2.5rem;
             display: inline-block;
             vertical-align: bottom;
             transition: transform .15s ease;
+            font-weight: 600;
+            @include media-breakpoint-up(md) {
+              font-size: 2rem;
+              font-weight: 300;
+            }
           }
         }
         .prev {
