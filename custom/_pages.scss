@@ -26,8 +26,39 @@ main.page.single, .mce-content-body {
     }
   }
   p, .text-medium, figure {
-    & + figure, & + .mceTemp dl.wp-caption, & > img {
+    & + figure {
       margin-top: 2rem;
+      figcaption {
+        margin-bottom: 1rem;
+      }
+      &:last-child {
+        figcaption {
+          margin-bottom: 0;
+        }
+      }
+    }
+    & + p img {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    & + .mceTemp {
+      dl.wp-caption {
+        margin-top: 2rem;
+      }
+    }
+  }
+  p {
+    & > img {
+      margin-top: 1.5rem;
+      @include media-breakpoint-up(lg) {
+        margin-top: 1rem;
+        &.alignleft {
+          margin-top: 2rem;
+        }
+        &.alignright {
+          margin-top: 2rem;
+        }
+      }
     }
   }
   figure, dl.wp-caption, p > img {
