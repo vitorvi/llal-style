@@ -26,11 +26,11 @@ main.page.single, .mce-content-body {
     }
   }
   p, .text-medium, figure {
-    & + figure, & + .mceTemp dl.wp-caption {
+    & + figure, & + .mceTemp dl.wp-caption, & > img {
       margin-top: 2rem;
     }
   }
-  figure, dl.wp-caption {
+  figure, dl.wp-caption, p > img {
     margin-bottom: 1rem;
     &.alignleft {
       margin-right: 2rem;
