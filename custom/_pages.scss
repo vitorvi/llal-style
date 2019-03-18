@@ -1,22 +1,61 @@
 main.page {
   padding-top: 3.5rem;
-    @include media-breakpoint-up(lg) {
-      padding-top: 4.5rem;
-    }
-    &.single {
-      .post-content {
-        blockquote, blockquote p {
-          color: $marrom;
-          font-style: italic;
-        }
-        blockquote {
-          & + p {
-            margin-top: 1rem;
-            @include media-breakpoint-up(lg) {
-              margin-top: 2.5rem;
-            }
-          }
-        }
+  @include media-breakpoint-up(lg) {
+    padding-top: 4.5rem;
+  }
+}
+
+main.page.single, .mce-content-body {
+  blockquote, blockquote p {
+    color: $marrom;
+    font-style: italic;
+  }
+  blockquote {
+    & + p {
+      margin-top: 1rem;
+      @include media-breakpoint-up(lg) {
+        margin-top: 2.5rem;
       }
     }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    &.size-full {
+      width: 100%;
+    }
+  }
+  p, .text-medium, figure {
+    & + figure, & + .mceTemp dl.wp-caption {
+      margin-top: 2rem;
+    }
+  }
+  figure, dl.wp-caption {
+    margin-bottom: 1rem;
+    &.alignleft {
+      margin-right: 2rem;
+    }
+    &.alignright {
+      margin-left: 2rem;
+    }
+    .wp-caption-dt {
+      img {
+        display: block;
+      }
+      & + .wp-caption-dd {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .wp-caption, .wp-caption-dd {
+    background: none;
+    border: none;
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+    figcaption {
+      margin-top: .5rem;
+      font-style: italic;
+    }
+  }
 }

@@ -263,11 +263,15 @@ blockquote, blockquote p {
   @include blockquote;
 }
 
-.text-small, figcaption, input, textarea {
+.text-small, figcaption, dd, input, textarea {
   @include texto-pequeno;
   strong {
     font-weight: 700;
   }
+}
+
+figcaption, dd {
+  margin-bottom: 0;
 }
 
 h1, .h1 {
@@ -276,7 +280,7 @@ h1, .h1 {
   }
 }
 
-p, .text-medium {
+p, .text-medium, figure {
   strong {
     font-weight: 700;
   }
